@@ -29,11 +29,26 @@ export default function ServicePageClient({ service, content }: Props) {
             Interior Design Service
           </p>
           <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl font-heading">
-            {service.name}
+            {service.h1}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
             {service.tagline}
           </p>
+          {/* Inner links to related services */}
+          {relatedServices.length > 0 && (
+            <div className="mx-auto mt-5 flex flex-wrap items-center justify-center gap-2 max-w-3xl">
+              <span className="text-xs font-semibold uppercase tracking-wider text-blue-300/70">Related:</span>
+              {relatedServices.slice(0, 5).map((s) => (
+                <Link
+                  key={s.slug}
+                  href={getServiceUrl(s)}
+                  className="rounded-full border border-white/20 px-3 py-1 text-xs font-medium text-white/70 transition-colors hover:border-blue-400 hover:text-white hover:bg-white/10"
+                >
+                  {s.name}
+                </Link>
+              ))}
+            </div>
+          )}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={SMS_HREF} className="rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-slate-900 shadow-lg hover:bg-blue-50 font-cta">
               Text Us

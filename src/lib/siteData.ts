@@ -14,6 +14,7 @@ export type ServiceCategory = "design" | "contractor";
 
 export interface Service {
   name: string;
+  h1: string;
   slug: string;
   tagline: string;
   shortDesc: string;
@@ -25,8 +26,9 @@ export interface Service {
 export const services: Service[] = [
   {
     name: "Full-Home Interior Design",
+    h1: "Full-Home Interior Design Services for NYC Apartments, Brownstones & Condos",
     slug: "full-home-interior-design",
-    tagline: "Complete Interior Transformations for NYC Homes",
+    tagline: "End-to-end residential interior design covering every room — from pre-war apartments on the Upper West Side to new-construction condos in Hudson Yards. Space planning, custom furniture, lighting, and full project management included.",
     shortDesc:
       "End-to-end interior design services for apartments, brownstones, townhouses, and condos across New York City.",
     description:
@@ -45,8 +47,9 @@ export const services: Service[] = [
   },
   {
     name: "Kitchen Design",
+    h1: "Custom Kitchen Interior Design for NYC Apartments, Brownstones & Condos",
     slug: "kitchen-design",
-    tagline: "Custom Kitchen Design for NYC Apartments & Homes",
+    tagline: "From galley kitchen makeovers in Manhattan studios to chef-grade installations in Brooklyn brownstones — our designers maximize every square inch with custom cabinetry, premium countertops, and smart storage solutions built for New York City living.",
     shortDesc:
       "Expert kitchen design and renovation services tailored to New York City's unique layouts and building requirements.",
     description:
@@ -65,8 +68,9 @@ export const services: Service[] = [
   },
   {
     name: "Bathroom Design",
+    h1: "Luxury Bathroom Design & Spa-Inspired Renovation for NYC Apartments & Townhouses",
     slug: "bathroom-design",
-    tagline: "Luxury Bathroom Design for NYC Properties",
+    tagline: "Transform compact NYC bathrooms into spa-quality retreats with premium tile, custom vanities, walk-in showers, heated floors, and smart storage — fully designed for co-op and condo building requirements.",
     shortDesc:
       "Spa-inspired bathroom design and renovation for apartments, townhouses, and commercial properties across NYC.",
     description:
@@ -85,8 +89,9 @@ export const services: Service[] = [
   },
   {
     name: "Living Room Design",
+    h1: "Living Room Interior Design & Furniture Layout for NYC Apartments & Homes",
     slug: "living-room-design",
-    tagline: "Stunning Living Room Interiors for NYC Residences",
+    tagline: "Create a living room that works as hard as you do — open-concept layouts, multi-functional furniture, custom built-ins, and curated styling for apartments where the living room doubles as dining room, home office, and guest space.",
     shortDesc:
       "Custom living room design that maximizes space, comfort, and style for New York City apartments and homes.",
     description:
@@ -105,8 +110,9 @@ export const services: Service[] = [
   },
   {
     name: "Bedroom Design",
+    h1: "Bedroom Interior Design & Custom Storage Solutions for NYC Apartments",
     slug: "bedroom-design",
-    tagline: "Serene Bedroom Interiors for NYC Homes",
+    tagline: "Design a restful retreat from the energy of New York City — master suites with walk-in closets, compact bedrooms with floor-to-ceiling storage, luxury bedding, blackout window treatments, and ambient lighting tailored to your space.",
     shortDesc:
       "Personalized bedroom design services creating restful, beautiful retreats in NYC apartments and townhouses.",
     description:
@@ -125,8 +131,9 @@ export const services: Service[] = [
   },
   {
     name: "Home Office Design",
+    h1: "Home Office Design for NYC Remote Workers, Entrepreneurs & Creative Professionals",
     slug: "home-office-design",
-    tagline: "Productive Home Office Design for NYC Professionals",
+    tagline: "Purpose-built workspaces that boost productivity and look great on video calls — ergonomic layouts, acoustic treatments, integrated tech, and dual-purpose room design for NYC apartments where every square foot counts.",
     shortDesc:
       "Functional and inspiring home office design for remote workers, entrepreneurs, and creatives in New York City.",
     description:
@@ -145,8 +152,9 @@ export const services: Service[] = [
   },
   {
     name: "Commercial Interior Design",
+    h1: "Commercial Interior Design for NYC Offices, Retail Stores, Restaurants & Hotels",
     slug: "commercial-interior-design",
-    tagline: "Professional Commercial Interior Design Across NYC",
+    tagline: "Full-service commercial design that reinforces your brand and impresses every client who walks through the door — offices, co-working spaces, retail shops, restaurants, medical practices, and hospitality venues across all five boroughs.",
     shortDesc:
       "Full-service interior design for offices, retail spaces, restaurants, hotels, and commercial properties in New York City.",
     description:
@@ -165,8 +173,9 @@ export const services: Service[] = [
   },
   {
     name: "Space Planning & Layout",
+    h1: "NYC Apartment Space Planning, Floor Plan Optimization & Furniture Layout Design",
     slug: "space-planning",
-    tagline: "Expert Space Planning for NYC Apartments & Homes",
+    tagline: "Make every square foot count with professional floor plan analysis, 3D renderings, traffic flow optimization, and furniture placement guides — the difference between an NYC apartment that feels cramped and one that feels twice its size.",
     shortDesc:
       "Professional floor plan optimization and furniture layout services for maximizing every square foot of your NYC property.",
     description:
@@ -185,8 +194,9 @@ export const services: Service[] = [
   },
   {
     name: "Color Consultation",
+    h1: "Interior Color Consultation & Paint Selection for NYC Apartments & Homes",
     slug: "color-consultation",
-    tagline: "Professional Color Consultation for NYC Interiors",
+    tagline: "Whole-home color palettes developed for NYC light conditions — accounting for natural light, ceiling height, room size, and surrounding views to choose paint colors, accent tones, and material finishes that transform your interior.",
     shortDesc:
       "Expert color palette development and paint selection services for residential and commercial interiors in NYC.",
     description:
@@ -205,8 +215,9 @@ export const services: Service[] = [
   },
   {
     name: "Furniture Selection & Procurement",
+    h1: "Furniture Selection, Sourcing & Procurement for NYC Apartments — Trade-Only Access",
     slug: "furniture-selection",
-    tagline: "Curated Furniture Selection for NYC Homes",
+    tagline: "Access trade-only showrooms, custom fabricators, and curated vintage dealers — plus full procurement, delivery coordination past tight NYC doorways and freight elevators, and white-glove installation so you never lift a finger.",
     shortDesc:
       "Professional furniture sourcing, procurement, and installation services with access to trade-only showrooms and custom makers.",
     description:
@@ -225,8 +236,9 @@ export const services: Service[] = [
   },
   {
     name: "Lighting Design",
+    h1: "Residential & Commercial Lighting Design for NYC Apartments, Homes & Offices",
     slug: "lighting-design",
-    tagline: "Professional Lighting Design for NYC Interiors",
+    tagline: "Layered lighting plans combining ambient, task, and accent lighting — recessed layouts, pendant placement, under-cabinet fixtures, smart dimmer systems, and natural light optimization designed specifically for New York City interiors.",
     shortDesc:
       "Layered lighting design that enhances ambiance, functionality, and architectural features in every room.",
     description:
@@ -245,8 +257,9 @@ export const services: Service[] = [
   },
   {
     name: "Custom Closet Design",
+    h1: "Custom Closet Design & Organization Systems for Small NYC Apartments & Walk-Ins",
     slug: "custom-closet-design",
-    tagline: "Custom Closet Systems for NYC Apartments",
+    tagline: "Double or triple your closet storage capacity with custom-built systems — hanging rods, adjustable shelving, pull-out drawers, shoe storage, and seasonal rotation solutions designed and measured for your exact NYC closet dimensions.",
     shortDesc:
       "Maximize storage with custom-designed closet systems built specifically for New York City's compact spaces.",
     description:
@@ -265,8 +278,9 @@ export const services: Service[] = [
   },
   {
     name: "Renovation Management",
+    h1: "NYC Apartment Renovation Project Management — Permits, Contractors & Timeline Control",
     slug: "renovation-management",
-    tagline: "Full Renovation Management for NYC Properties",
+    tagline: "We handle every logistical detail of your NYC renovation — DOB permits, co-op board approvals, contractor coordination, material lead times, building schedules, and budget tracking so you focus on design decisions, not construction chaos.",
     shortDesc:
       "End-to-end renovation project management for apartment, brownstone, and townhouse renovations across New York City.",
     description:
@@ -285,8 +299,9 @@ export const services: Service[] = [
   },
   {
     name: "Window Treatment Design",
+    h1: "Custom Window Treatments, Curtains, Blinds & Motorized Shades for NYC Apartments",
     slug: "window-treatment-design",
-    tagline: "Custom Window Treatments for NYC Interiors",
+    tagline: "Bespoke drapery, Roman shades, motorized blinds, plantation shutters, and blackout layering systems — measured, sourced from premium textile houses, and professionally installed to control light, add privacy, and frame your NYC views.",
     shortDesc:
       "Bespoke curtains, blinds, shades, and drapery design for residential and commercial spaces in New York City.",
     description:
@@ -305,8 +320,9 @@ export const services: Service[] = [
   },
   {
     name: "Art Curation & Styling",
+    h1: "Art Curation, Selection & Professional Installation for NYC Homes & Offices",
     slug: "art-curation",
-    tagline: "Professional Art Curation for NYC Homes & Offices",
+    tagline: "Build a collection that reflects your taste and complements your interior — original artwork, limited editions, photography, and sculpture sourced from galleries, emerging artists, and private dealers, with professional hanging and art lighting.",
     shortDesc:
       "Expert art selection, placement, and installation services that bring personality and sophistication to your interior.",
     description:
@@ -325,8 +341,9 @@ export const services: Service[] = [
   },
   {
     name: "Staging & Styling",
+    h1: "NYC Home Staging & Real Estate Styling — Sell Faster at a Higher Price",
     slug: "staging-styling",
-    tagline: "Professional Home Staging for NYC Real Estate",
+    tagline: "Professional staging that transforms empty or lived-in properties into aspirational spaces — furniture rental, photography-ready styling, luxury staging for high-end listings, and open house preparation designed for NYC's competitive real estate market.",
     shortDesc:
       "Real estate staging and interior styling services that maximize property value and accelerate sales in the NYC market.",
     description:
@@ -345,8 +362,9 @@ export const services: Service[] = [
   },
   {
     name: "Wallpaper & Wall Treatments",
+    h1: "Designer Wallpaper, Venetian Plaster & Custom Wall Treatments for NYC Interiors",
     slug: "wallpaper-wall-treatments",
-    tagline: "Designer Wallpaper & Wall Treatments for NYC Interiors",
+    tagline: "Go beyond paint with designer wallpaper, hand-painted murals, Venetian plaster, lime wash finishes, wood paneling, and upholstered accent walls — sourced from the world's best manufacturers and professionally installed in your NYC home or office.",
     shortDesc:
       "Custom wallpaper selection, murals, textured finishes, and accent wall design for residential and commercial spaces.",
     description:
@@ -365,8 +383,9 @@ export const services: Service[] = [
   },
   {
     name: "Smart Home Integration",
+    h1: "Smart Home Automation & Technology Integration for NYC Apartments & Residences",
     slug: "smart-home-integration",
-    tagline: "Smart Home Design for NYC Apartments & Residences",
+    tagline: "Seamless smart home systems that enhance daily comfort without cluttering your interior — automated lighting scenes, motorized shades, whole-home audio, climate zones, security integration, and voice control with minimal visible hardware.",
     shortDesc:
       "Seamless technology integration including smart lighting, climate control, audio, security, and automation systems.",
     description:
@@ -388,8 +407,9 @@ export const services: Service[] = [
 
   {
     name: "Kitchen Renovation & Remodeling",
+    h1: "Kitchen Renovation & Remodeling Contractors in NYC — Licensed, Insured & DOB-Permitted",
     slug: "kitchen-renovation",
-    tagline: "Expert Kitchen Renovation Contractors in NYC",
+    tagline: "Full gut renovations to modern remodels — demolition, plumbing rough-in, custom cabinet installation, countertop fabrication, backsplash tiling, and electrical hookups with DOB permits, co-op board coordination, and freight elevator scheduling handled for you.",
     shortDesc:
       "Gut renovations, cabinet installation, countertop fabrication, plumbing, electrical, and tile work for NYC kitchens.",
     description:
@@ -408,8 +428,9 @@ export const services: Service[] = [
   },
   {
     name: "Bathroom Renovation & Remodeling",
+    h1: "Bathroom Renovation & Remodeling Contractors in NYC — Gut Renos, Tile & Plumbing",
     slug: "bathroom-renovation",
-    tagline: "Complete Bathroom Renovation Contractors in NYC",
+    tagline: "Complete bathroom gut renovations with waterproofing, shower pan construction, floor and wall tile installation, vanity fitting, plumbing rough-in, heated flooring, and ventilation upgrades — all DOB-permitted and co-op board compliant.",
     shortDesc:
       "Complete bathroom gut renos including tile installation, plumbing rough-in, vanity installation, and waterproofing.",
     description:
@@ -428,8 +449,9 @@ export const services: Service[] = [
   },
   {
     name: "General Contracting",
+    h1: "Licensed General Contractors for NYC Apartment, Brownstone & Condo Renovations",
     slug: "general-contracting",
-    tagline: "Licensed General Contractors Serving All of NYC",
+    tagline: "Single-point accountability for renovations of any scale — we coordinate plumbing, electrical, carpentry, painting, tiling, and HVAC under one roof with DOB permits, structural engineering, co-op board alteration agreements, and building logistics managed start to finish.",
     shortDesc:
       "Full-scale residential and commercial renovation management, structural work, and NYC code compliance.",
     description:
@@ -448,8 +470,9 @@ export const services: Service[] = [
   },
   {
     name: "Painting & Wall Finishing",
+    h1: "Interior & Exterior Painting, Venetian Plaster & Wall Finishing Services in NYC",
     slug: "painting-services",
-    tagline: "Professional Painting & Wall Finishing in NYC",
+    tagline: "Meticulous prep work followed by expert application of premium paints, Venetian plaster, lime wash, skim coating, and wallpaper installation — with building common area protection, zero neighbor disruption, and flawless results every time.",
     shortDesc:
       "Interior and exterior painting, Venetian plaster, skim coating, wallpaper installation, and accent walls across NYC.",
     description:
@@ -468,8 +491,9 @@ export const services: Service[] = [
   },
   {
     name: "Flooring Installation",
+    h1: "Hardwood, Tile & Luxury Vinyl Flooring Installation for NYC Apartments & Homes",
     slug: "flooring-installation",
-    tagline: "Expert Flooring Installation for NYC Properties",
+    tagline: "Precision installation of hardwood, engineered wood, tile, marble, luxury vinyl plank, and carpet — with subfloor leveling, moisture testing, soundproofing underlayment for co-op STC compliance, and radiant heat flooring available.",
     shortDesc:
       "Hardwood, tile, marble, LVP, carpet, and radiant heat flooring installation with subfloor prep for NYC properties.",
     description:
@@ -488,8 +512,9 @@ export const services: Service[] = [
   },
   {
     name: "Custom Carpentry & Millwork",
+    h1: "Custom Carpentry, Built-In Cabinetry & Millwork for NYC Apartments & Townhouses",
     slug: "custom-carpentry",
-    tagline: "Custom Carpentry & Millwork for NYC Interiors",
+    tagline: "One-of-a-kind built-ins, bookshelves, entertainment centers, wainscoting, coffered ceilings, and bespoke furniture — built on-site or in our shop, measured to your exact dimensions, and finished to match your building's architectural character.",
     shortDesc:
       "Built-in cabinetry, bookshelves, wainscoting, crown molding, and custom furniture building for NYC homes.",
     description:
@@ -508,8 +533,9 @@ export const services: Service[] = [
   },
   {
     name: "Electrical Services",
+    h1: "Licensed Electricians for NYC Apartment Renovations — Rewiring, Panels & Recessed Lighting",
     slug: "electrical-services",
-    tagline: "Licensed Electricians Serving NYC Homes & Businesses",
+    tagline: "Panel upgrades, circuit additions, complete rewiring, recessed lighting installation, outlet relocation, and smart home wiring — all performed to NYC electrical code with DOB permits, inspections, and building management coordination included.",
     shortDesc:
       "Rewiring, panel upgrades, recessed lighting, outlet relocation, smart home wiring, and full NYC code compliance.",
     description:
@@ -528,8 +554,9 @@ export const services: Service[] = [
   },
   {
     name: "Plumbing Services",
+    h1: "Licensed Plumbers for NYC Kitchen & Bathroom Renovations, Pipe Replacement & Gas Lines",
     slug: "plumbing-services",
-    tagline: "Licensed Plumbers for NYC Renovations & Repairs",
+    tagline: "Fixture swaps to complete re-piping — kitchen and bathroom rough-in, gas line installation, water heater replacement, drain cleaning, and sewer repair with DOB permits filed, water shutoffs coordinated, and every inspection passed on the first attempt.",
     shortDesc:
       "Pipe replacement, fixture installation, gas line work, water heaters, and kitchen/bath plumbing rough-in across NYC.",
     description:
@@ -548,8 +575,9 @@ export const services: Service[] = [
   },
   {
     name: "Drywall & Plastering",
+    h1: "Drywall Installation, Skim Coating & Plaster Repair for NYC Apartments & Brownstones",
     slug: "drywall-plastering",
-    tagline: "Professional Drywall & Plastering in NYC",
+    tagline: "New partition walls, historic plaster and lath repair, flawless skim coating, soundproofing drywall assemblies for co-op noise requirements, and Level 5 finishes — with fire-rated assemblies where required by NYC building code.",
     shortDesc:
       "Sheetrock installation, skim coating, plaster repair, soundproofing, and partition wall construction across NYC.",
     description:
@@ -568,8 +596,9 @@ export const services: Service[] = [
   },
   {
     name: "Tile & Stone Installation",
+    h1: "Tile & Natural Stone Installation for NYC Kitchens, Bathrooms & Floors — Marble, Porcelain & Mosaic",
     slug: "tile-installation",
-    tagline: "Expert Tile & Stone Installation Across NYC",
+    tagline: "Precision tile setting for ceramic, porcelain, marble, granite, slate, glass mosaic, and large-format slabs — kitchen backsplashes, bathroom shower surrounds, full-floor marble installations with tight grout lines and seamless transitions.",
     shortDesc:
       "Ceramic, porcelain, marble, natural stone, mosaic, backsplash, and floor and wall tile installation for NYC properties.",
     description:
@@ -588,8 +617,9 @@ export const services: Service[] = [
   },
   {
     name: "Cabinet Installation",
+    h1: "Kitchen Cabinet & Bathroom Vanity Installation in NYC — Custom, Semi-Custom & Stock",
     slug: "cabinet-installation",
-    tagline: "Professional Cabinet Installation in NYC",
+    tagline: "Level, plumb, and perfectly aligned cabinet installations regardless of your building's walls and floors — measurement, template verification, delivery coordination, hardware mounting, soft-close upgrades, and final adjustment all included.",
     shortDesc:
       "Kitchen cabinets, bathroom vanities, built-in storage, custom closet systems, and hardware installation across NYC.",
     description:
@@ -608,8 +638,9 @@ export const services: Service[] = [
   },
   {
     name: "Demolition & Gut Renovation",
+    h1: "Interior Demolition & Gut Renovation Services in NYC — Permitted, Insured & Code-Compliant",
     slug: "demolition-gut-renovation",
-    tagline: "Licensed Demolition & Gut Renovation in NYC",
+    tagline: "Controlled selective and full interior demolition — asbestos testing coordination, lead paint assessment, DOB demolition permits, debris removal logistics, structural engineer coordination, and building protection for floors, elevators, and hallways.",
     shortDesc:
       "Selective and full demolition, asbestos abatement coordination, debris removal, and structural modification in NYC.",
     description:
@@ -628,8 +659,9 @@ export const services: Service[] = [
   },
   {
     name: "Door & Window Installation",
+    h1: "Interior Door, Pocket Door & Window Replacement Installation for NYC Apartments & Homes",
     slug: "door-window-installation",
-    tagline: "Door & Window Installation for NYC Apartments & Homes",
+    tagline: "Interior door replacement, pocket door construction, barn door systems, and full window replacement — custom-fitted for pre-war buildings where nothing is plumb or square, with Landmarks Preservation Commission coordination when required.",
     shortDesc:
       "Interior doors, pocket doors, sliding doors, window replacement, and trim and casing installation across NYC.",
     description:
@@ -648,8 +680,9 @@ export const services: Service[] = [
   },
   {
     name: "Crown Molding & Trim Work",
+    h1: "Crown Molding, Baseboard & Decorative Trim Installation for NYC Apartments & Brownstones",
     slug: "crown-molding-trim",
-    tagline: "Crown Molding & Decorative Trim Installation in NYC",
+    tagline: "Precision-installed crown molding, baseboards, chair rails, picture rails, wainscoting, and panel molding — matching existing historic profiles in pre-war apartments or creating new modern details with seamless, gap-free results.",
     shortDesc:
       "Crown molding, baseboards, chair rails, wainscoting, decorative trim, and panel molding for NYC interiors.",
     description:
@@ -668,8 +701,9 @@ export const services: Service[] = [
   },
   {
     name: "Shelving & Built-in Installation",
+    h1: "Custom Bookshelves, Floating Shelves & Built-In Storage Installation for NYC Apartments",
     slug: "shelving-built-ins",
-    tagline: "Custom Shelving & Built-in Installation in NYC",
+    tagline: "Make every wall work harder — custom bookshelves, floating shelves, entertainment centers, mudroom systems, pantry shelving, and display niches custom-measured and anchored to NYC's mix of plaster, drywall, brick, and concrete construction.",
     shortDesc:
       "Custom bookshelves, floating shelves, entertainment centers, mudroom built-ins, and pantry shelving for NYC homes.",
     description:
@@ -688,8 +722,9 @@ export const services: Service[] = [
   },
   {
     name: "Furniture Assembly & Installation",
+    h1: "White-Glove Furniture Assembly, Wall Mounting & Installation for NYC Apartments",
     slug: "furniture-assembly",
-    tagline: "White-Glove Furniture Assembly & Installation in NYC",
+    tagline: "Full assembly for all major brands, wall-mounted shelving and mirrors, anti-tip anchoring for tall pieces, Murphy bed installation, and delivery coordination past narrow hallways, tight stairwells, and strict NYC building delivery windows.",
     shortDesc:
       "White-glove furniture assembly, wall mounting, anchoring, and delivery coordination for NYC apartments.",
     description:
@@ -708,8 +743,9 @@ export const services: Service[] = [
   },
   {
     name: "TV Mounting & Media Setup",
+    h1: "TV Wall Mounting, In-Wall Cable Concealment & Surround Sound Installation in NYC",
     slug: "tv-mounting-media",
-    tagline: "Professional TV Mounting & Media Installation in NYC",
+    tagline: "Clean, organized entertainment setups — TV mounting on drywall, plaster, brick, or concrete with hidden cables, surround sound systems, soundbar installation, streaming device configuration, and smart home integration for Sonos, Control4, and Lutron.",
     shortDesc:
       "TV wall mounting, cable concealment, surround sound, media cabinet setup, and smart home integration across NYC.",
     description:
@@ -728,8 +764,9 @@ export const services: Service[] = [
   },
   {
     name: "Handyman Services",
+    h1: "Reliable Handyman Services for NYC Apartments — Repairs, Installations & Maintenance",
     slug: "handyman-services",
-    tagline: "Reliable Handyman Services Across NYC",
+    tagline: "Skilled handymen for the jobs that don't need a full crew — fixture replacements, picture hanging, caulking, minor plumbing and electrical, touch-up painting, weather stripping, and dozens of other tasks done right the first time.",
     shortDesc:
       "General repairs, fixture swaps, picture hanging, caulking, minor plumbing and electrical, and touch-up painting.",
     description:
