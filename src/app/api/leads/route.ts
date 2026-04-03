@@ -2,15 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-const TO = process.env.NOTIFY_EMAIL || "jeff@consortiumnyc.com";
-const FROM = process.env.FROM_EMAIL || "Design Leads <notifications@consortiumnyc.com>";
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+}
+function getResend() { return new Resend(process.env.RESEND_API_KEY); }
 
 export async function POST(req: NextRequest) {
   try {
@@ -42,7 +40,9 @@ export async function POST(req: NextRequest) {
     }
 
     // Save to Supabase
-    const { error: dbError } = await supabase.from("leads").insert({
+    const TO = process.env.NOTIFY_EMAIL || "jeff@consortiumnyc.com";
+    const FROM = process.env.FROM_EMAIL || "Design Leads <notifications@consortiumnyc.com>";
+    const { error: dbError } = await getSupabase().from("leads").insert({
       name,
       email,
       phone,
@@ -116,7 +116,7 @@ export async function POST(req: NextRequest) {
     `;
 
     try {
-      await resend.emails.send({
+      await getResend().emails.send({
         from: FROM,
         to: TO,
         subject,

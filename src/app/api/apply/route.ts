@@ -2,17 +2,17 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-const TO = process.env.NOTIFY_EMAIL || "jeff@consortiumnyc.com";
-const FROM = process.env.FROM_EMAIL || "Design Applications <notifications@consortiumnyc.com>";
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+}
+function getResend() { return new Resend(process.env.RESEND_API_KEY); }
 
 export async function POST(req: NextRequest) {
+  const TO = process.env.NOTIFY_EMAIL || "jeff@consortiumnyc.com";
+  const FROM = process.env.FROM_EMAIL || "Design Applications <notifications@consortiumnyc.com>";
   try {
     const formData = await req.formData();
 
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
       const path = `applications/${safeName}-${timestamp}/portfolio.${ext}`;
       const buffer = Buffer.from(await portfolioFile.arrayBuffer());
 
-      const { error: uploadError } = await supabase.storage
+      const { error: uploadError } = await getSupabase().storage
         .from("uploads")
         .upload(path, buffer, {
           contentType: portfolioFile.type,
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
       if (uploadError) {
         console.error("Portfolio upload error:", uploadError);
       } else {
-        const { data: urlData } = supabase.storage
+        const { data: urlData } = getSupabase().storage
           .from("uploads")
           .getPublicUrl(path);
         portfolioFileUrl = urlData.publicUrl;
@@ -68,7 +68,7 @@ export async function POST(req: NextRequest) {
       const resumePath = `applications/${safeName}-${timestamp}/resume.${resumeExt}`;
       const resumeBuffer = Buffer.from(await resumeFile.arrayBuffer());
 
-      const { error: resumeError } = await supabase.storage
+      const { error: resumeError } = await getSupabase().storage
         .from("uploads")
         .upload(resumePath, resumeBuffer, {
           contentType: resumeFile.type,
@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
       if (resumeError) {
         console.error("Resume upload error:", resumeError);
       } else {
-        const { data: resumeUrlData } = supabase.storage
+        const { data: resumeUrlData } = getSupabase().storage
           .from("uploads")
           .getPublicUrl(resumePath);
         resumeUrl = resumeUrlData.publicUrl;
@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Save application to Supabase
-    const { error: dbError } = await supabase.from("applications").insert({
+    const { error: dbError } = await getSupabase().from("applications").insert({
       name,
       email,
       phone,
@@ -144,7 +144,7 @@ export async function POST(req: NextRequest) {
     `;
 
     try {
-      await resend.emails.send({
+      await getResend().emails.send({
         from: FROM,
         to: TO,
         subject: `New Application: ${position} — ${name}`,
